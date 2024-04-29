@@ -1,0 +1,15 @@
+ALGORITHM algorithm_name
+VAR
+arr: tableau d'entiers 
+i, j, current: entiers 
+BEGIN
+ FOR i = 1 TO length(arr) - 1
+     current = arr [i]
+     j = i - 1
+     WHILE j>= 0 AND arr[j] > current
+         arr[j + 1] = arr[j]
+         j = j - 1
+END WHILE
+arr[j + 1] = current
+END FOR
+END
